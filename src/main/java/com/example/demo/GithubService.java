@@ -15,7 +15,7 @@ public class GithubService {
 
 
     public Flux<String> getReposForUser(String username) {
-        return githubDownstreamService.getAllRepos(username)
+        return githubDownstreamService.getAllRepos(username, "")
                 .map(githubMapper::mapRepoToNames);
     }
 }
