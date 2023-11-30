@@ -15,7 +15,7 @@ public class GithubDownstreamService {
     @Autowired
     WebClient webClient;
 
-    public Flux<Map<String, Object>> getAllRepos(String user) {
+    public Flux<Map<String, Object>> getAllRepos(String user, String foo) {
         return webClient.get()
                 .uri("/users/{username}/repos", user)
                 .retrieve()

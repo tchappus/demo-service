@@ -9,6 +9,6 @@ public class GithubMapper {
 
 
     public String mapRepoToNames(Map<String, Object> repo) {
-        return (String)repo.get("name");
+        return (String)repo.get("number");
     }
 }
